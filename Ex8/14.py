@@ -7,8 +7,8 @@ def main(x):
     x = x.replace("\n", '')
     x = x.replace("|", '')
     x = x.replace('"', '')
-    print(x)
-    r = r"[a-z]+_?[0-9]*<list.[a-z]+_?[0-9]*;[a-z]+_?[0-9]*."
+    r = "[a-z]+_?[0-9]*<list.[a-z]+_?[0-9]*;[a-z]" \
+        "+_?[0-9]*;?[a-z]+_?[0-9]*;?[a-z]+_?[0-9]*."
     ans = re.findall(r, x)
     keys = []
     values = []
